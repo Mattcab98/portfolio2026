@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-brand: #a3e635;
+  --color-brand-hover: #8ef83a;
+  --color-background: #09090b;
+  --color-surface: #121215;
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-display: "Syne", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  /* Effects */
+  --shadow-glow: 0 0 20px rgb(163 230 53 / 40%);
+  --shadow-glow-sm: 0 0 20px rgb(163 230 53 / 30%);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--color-brand);
+}
