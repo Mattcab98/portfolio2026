@@ -25,5 +25,30 @@ body,
 }
 
 body {
-  background-color: var(--color-brand);
+  /* background-color: var(--color-brand); */
+}
+
+/* Grid Background */
+
+.grid-background {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+
+  transform:
+    perspective(800px)
+    rotateX(8deg)
+    rotateZ(-2deg)
+    scale(1.1);
+
+  transform-origin: center;
 }
