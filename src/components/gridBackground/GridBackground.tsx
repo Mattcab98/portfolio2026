@@ -1,18 +1,23 @@
-const GridBackground = () => {
-  return (
-    <div
-      className="
-        pointer-events-none
-        fixed
-        inset-0
-        -z-10
-        overflow-hidden
-        bg-[#C6FF00]
-      "
-    >
-      <div className="grid-background absolute -inset-20" />
-    </div>
-  )
+interface GridBackgroundProps {
+    backgroundColor?: string;
+    lineColor?: string;
 }
 
-export default GridBackground
+const GridBackground = ({
+    backgroundColor = "#09090b",
+    lineColor = "rgba(163, 230, 53, 0.15)",
+}: GridBackgroundProps) => {
+    return (
+        <div
+            className="absolute inset-0 overflow-hidden"
+            style={{
+                backgroundColor,
+                "--grid-line-color": lineColor,
+            } as React.CSSProperties}
+        >
+            <div className="grid-background absolute -inset-20" />
+        </div>
+    );
+};
+
+export default GridBackground;

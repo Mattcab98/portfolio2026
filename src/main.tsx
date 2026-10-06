@@ -17,7 +17,7 @@ import '@fontsource/syne/800.css'
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <BrowserRouter>
-                <GridBackground/>
+                <GridBackground backgroundColor='#98c104'/>
                 <App />
         </BrowserRouter>
     </React.StrictMode>

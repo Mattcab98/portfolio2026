@@ -22,15 +22,14 @@ const Hero = () => {
             {
                 opacity: .7,
                 duration: 1,
-                ease: 'power3.in'
-
+                ease: 'power3.in',
             }
         )
 
         tl.fromTo(
             spans,
             {
-                x: "-50vw",
+                x: "-70vw",
                 opacity: 0,
             },
             {
@@ -46,9 +45,9 @@ const Hero = () => {
 
     return (
         <>
-            <section className="hero flex flex-col gap-4 justify-center">
+            <section className="hero flex flex-col items-end justify-center gap-5 pt-5">
 
-                <pre ref={stickRef} className="text-xs font-normal text-black/15 absolute top-47 right-25">
+                <pre ref={stickRef} className="text-xs text-black/15 absolute top-47 right-25">v
                     {`const Hero = () => {
   const title = "Full Stack Developer";
   const skills = ["React", "TypeScript", "Node"];
@@ -69,7 +68,7 @@ const Hero = () => {
 };`}
                 </pre>
 
-                <div className="hero__available bg-background/30 p-3 rounded-3xl w-85 flex items-center gap-3 justify-center">
+                <div className="z-1 hero__available text-background bg-background/20 p-3 rounded-3xl w-75 flex justify-center items-center gap-3 mr-3">
 
                     <div className="relative flex w-3 h-3">
                         <span className="absolute inline-flex bg-background w-3 h-3 rounded-full animate-ping opacity-65"></span>
@@ -85,7 +84,7 @@ const Hero = () => {
 
                 <h1
                     ref={titleRef}
-                    className="flex flex-col items-end text-end text-7xl font-bold text-background justify-center pr-3"
+                    className="flex flex-col items-end text-end text-7xl font-bold text-background justify-center pr-3 gap-2"
                 >
 
                     <span>
@@ -105,8 +104,6 @@ const Hero = () => {
                     </span>
 
                 </h1>
-
-                <span className="text-red-500 absolute text-9xl-"> { } </span>
 
             </section >
         </>
