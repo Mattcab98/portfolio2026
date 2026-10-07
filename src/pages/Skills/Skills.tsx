@@ -1,7 +1,9 @@
 import { FaLayerGroup } from "react-icons/fa";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
+import { SkillCard } from "../../components/card/SkillCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,36 +46,43 @@ const Skills = () => {
     }, []);
 
     return (
-        <section
-            ref={sectionRef}
-            className="w-85 mx-auto text-brand py-25 gap-10 flex flex-col mt-18"
-        >
+        <>
+            <section
+                ref={sectionRef}
+                className="w-85 mx-auto text-gray-200 py-25 gap-10 flex flex-col mt-18"
+            >
 
-            <div className="skills-item bg-brand/20 gap-4 p-3 rounded-3xl flex justify-center items-center w-70 border-2">
-                <FaLayerGroup className="w-5 h-5" />
 
-                <span className="text-2xl">
-                    Technology Stack
-                </span>
-            </div>
+                <div className="skills-item bg-brand/20 gap-4 p-3 rounded-3xl flex justify-center items-center w-70 border-2">
+                    <FaLayerGroup className="w-5 h-5" />
 
-            <div className="skills-item flex flex-col items-start text-start text-[53px] font-bold text-white justify-center">
-                <h3 className="leading-[1.3]">
-                    My Extensive List of{" "}
-                    <span className="rounded-xl text-[55px] bg-brand p-1 text-background">
-                        Skills
+                    <span className="text-2xl">
+                        Technology Stack
                     </span>
+                </div>
+
+                <div className="skills-item flex flex-col items-start text-start text-[53px] font-bold text-white justify-center">
+                    <h3 className="leading-[1.3]">
+                        My Extensive List of{" "}
+                        <span className="rounded-xl text-[55px] bg-brand p-1 text-background">
+                            Skills
+                        </span>
+                    </h3>
+                </div>
+
+                <h3 className="skills-item text-gray-300 text-xl w-[90%] text-start">
+                    I leverage modern frameworks and advanced tools to build
+                    high-performance applications, optimized for search engines
+                    and built with a solid foundation designed to deliver fast,
+                    seamless experiences that grow with each project.
                 </h3>
-            </div>
 
-            <h3 className="skills-item text-white text-[26px] text-start">
-                I leverage modern frameworks and advanced tools to build
-                high-performance applications, optimized for search engines
-                and built with a solid foundation designed to deliver fast,
-                seamless experiences that grow with each project.
-            </h3>
+                <div className="container__skills flex flex-col gap-10">
+                    <SkillCard/>
+                </div>
 
-        </section>
+            </section>
+        </>
     );
 };
 

@@ -45,6 +45,7 @@ const Hero = () => {
 
     return (
         <>
+
             <section className="hero flex flex-col items-end justify-center gap-5 pt-5">
 
                 <pre ref={stickRef} className="text-xs text-black/15 absolute top-47 right-25">v
