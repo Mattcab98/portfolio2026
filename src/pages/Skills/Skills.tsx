@@ -33,8 +33,8 @@ const Skills = () => {
                     ease: "none",
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: "top bottom",
-                        end: "top 40%",
+                        start: "top 85%",
+                        end: "top 45%",
                         scrub: 1.5,
                     },
                 }
@@ -48,8 +48,9 @@ const Skills = () => {
     return (
         <>
             <section
+                
                 ref={sectionRef}
-                className="w-85 mx-auto text-gray-200 py-25 gap-10 flex flex-col mt-18"
+                className="text-gray-200 gap-10 flex flex-col py-15"
             >
 
 
@@ -61,7 +62,7 @@ const Skills = () => {
                     </span>
                 </div>
 
-                <div className="skills-item flex flex-col items-start text-start text-[53px] font-bold text-white justify-center">
+                <div className="skills-item flex flex-col items-start text-start text-[51px] font-bold text-white justify-center">
                     <h3 className="leading-[1.3]">
                         My Extensive List of{" "}
                         <span className="rounded-xl text-[55px] bg-brand p-1 text-background">
@@ -78,7 +79,7 @@ const Skills = () => {
                 </h3>
 
                 <div className="container__skills flex flex-col gap-10">
-                    <SkillCard/>
+                    <SkillCard />
                 </div>
 
             </section>

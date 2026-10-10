@@ -6,25 +6,42 @@ import { Header } from "../../components/header/Header";
 import { Hero } from "../Hero/Hero";
 import { Skills } from "../Skills/Skills";
 import { Method } from "../MethodWork/MethodWork";
+import { Projects } from "../MyProjects/Projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-    const skillsRef = useRef<HTMLElement>(null);
+    const skillsSectionRef = useRef<HTMLElement>(null);
+    const skillsPinRef = useRef<HTMLDivElement>(null);
+    const skillsContentRef = useRef<HTMLDivElement>(null);
 
     useLayoutEffect(() => {
+        const section = skillsSectionRef.current;
+        const pin = skillsPinRef.current;
+        const content = skillsContentRef.current;
+
+        if (!section || !pin || !content) return;
+
         const ctx = gsap.context(() => {
-            gsap.to(skillsRef.current, {
-                y: -100,
+            const getOverflow = () =>
+                Math.max(0, content.scrollHeight - pin.clientHeight);
+
+            gsap.to(content, {
+                y: () => -getOverflow(),
                 ease: "none",
                 scrollTrigger: {
-                    trigger: skillsRef.current,
-                    start: "top bottom",
-                    end: "top 40%",
+                    trigger: section,
+                    pin,
+                    pinSpacing: true,
+                    start: "top top",
+                    end: () => `+=${getOverflow()}`,
                     scrub: 1,
+                    invalidateOnRefresh: true,
                 },
             });
-        }, skillsRef);
+        }, section);
+
+        ScrollTrigger.refresh();
 
         return () => ctx.revert();
     }, []);
@@ -33,23 +50,63 @@ const Home = () => {
         <>
             <Header />
 
-            <section className="w-85 mx-auto">
+            <main className="relative">
+                {/* HERO */}
+                <section className="sticky top-0 z-10 w-85 mx-auto">
+                    <Hero />
+                </section>
 
-                <Hero />
-            </section>
+                {/* SKILLS */}
+                <section
+                    ref={skillsSectionRef}
+                    className="relative z-20"
+                >
+                    <div
+                        ref={skillsPinRef}
+                        className="
+                            h-screen
+                            overflow-hidden
+                            rounded-t-3xl
+                            bg-background
+                            px-8
+                        "
+                    >
+                        <div ref={skillsContentRef}>
+                            <Skills />
+                        </div>
+                    </div>
+                </section>
 
-            <section
-                ref={skillsRef}
-                className="rounded-t-3xl w-full bg-background"
-            >
+                {/* METHOD */}
+                <section
+                    className="
+                        relative
+                        z-30
+                        -mt-8
+                        min-h-screen
+                        rounded-t-3xl
+                        bg-brand
+                        px-8
+                    "
+                >
+                    <Method />
+                </section>
 
-                <Skills />
-            </section>
-
-            <section>
-
-                <Method/>
-            </section>
+                {/* PROJECTS */}
+                <section
+                    className="
+                        relative
+                        z-40
+                        -mt-8
+                        min-h-screen
+                        rounded-t-3xl
+                        bg-background
+                        px-8
+                    "
+                >
+                    <Projects />
+                </section>
+            </main>
         </>
     );
 };

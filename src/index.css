@@ -22,10 +22,28 @@ html,
 body,
 #root {
   min-height: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
+  margin: 0;
   background-color: var(--color-brand);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
 }
 
 /* Grid Background */
@@ -44,4 +62,14 @@ body {
         );
 
     background-size: 50px 50px;
+}
+
+/* Oculta la barra de scroll sin desactivar el desplazamiento */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
 }

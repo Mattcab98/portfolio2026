@@ -2,11 +2,10 @@ import { MethodCard } from "../../components/card/MethodCard";
 
 import { BiSitemap } from "react-icons/bi";
 
-
 const Method = () => {
     return (
         <>
-            <section className="rounded-t-4xl bg-red-100 w-[85%] mx-auto flex flex-col gap-5 items-start text-start">
+            <section className="rounded-t-4xl flex flex-col gap-5 items-start text-start py-15">
 
                 <div className="bg-background text-brand gap-2 px-5 py-1 rounded-3xl flex justify-center items-center border-2">
 
@@ -31,7 +30,7 @@ const Method = () => {
 
                 <MethodCard/>
 
-            </section>
+            </section>  
         </>
     );
 };
