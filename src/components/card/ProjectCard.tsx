@@ -60,7 +60,7 @@ const ProjectCard = () => (
                 badgeLabelClassName="text-[10px] "
                 badgeIconClassName="text-[10px]"
             >
-                <div className="mb-6 flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2">
                     {project.technologies.map((technology) => (
                         <span
                             key={technology}
@@ -73,6 +73,7 @@ const ProjectCard = () => (
                         </span>
                     ))}
                 </div>
+
             </Card>
         ))}
     </>

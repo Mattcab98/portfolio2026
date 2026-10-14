@@ -88,7 +88,7 @@ const Reviews = () => {
                 )}
 
                 {/* Formulario de reseñas */}
-                <div className="mt-20 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+                <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
                     <div>
                         <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand">
                             Worked with me?

@@ -1,13 +1,18 @@
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
 
 import { Header } from "../../components/header/Header";
+import { Footer } from "../../components/footer/Footer";
+import { ScrollToHash } from "../../components/scrollHash/ScrollHash"
+
 import { Hero } from "../Hero/Hero";
 import { Skills } from "../Skills/Skills";
 import { Method } from "../MethodWork/MethodWork";
 import { Projects } from "../MyProjects/Projects";
 import { Reviews } from "../reviews/Review";
+import { Contact } from "../Contact/Contact";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,16 +55,20 @@ const Home = () => {
     return (
         <>
             <Header />
+            <ScrollToHash />
 
             <main className="relative">
-                
                 {/* HERO */}
-                <section className="sticky top-0 z-10 w-85 mx-auto">
+                <section
+                    id="inicio"
+                    className="sticky top-0 z-10 mx-auto w-85"
+                >
                     <Hero />
                 </section>
 
                 {/* SKILLS */}
                 <section
+                    id="skills"
                     ref={skillsSectionRef}
                     className="relative z-20"
                 >
@@ -81,6 +90,7 @@ const Home = () => {
 
                 {/* METHOD */}
                 <section
+                    id="method"
                     className="
                         relative
                         z-30
@@ -96,6 +106,7 @@ const Home = () => {
 
                 {/* PROJECTS */}
                 <section
+                    id="projects"
                     className="
                         relative
                         z-40
@@ -109,18 +120,39 @@ const Home = () => {
                     <Projects />
                 </section>
 
-                {/* CLIENTS REVIEWS */}
-                <section className="
+                {/* REVIEWS */}
+                <section
+                    id="reviews"
+                    className="
                         relative
                         z-40
                         min-h-screen
                         rounded-t-3xl
                         bg-brand
                         p-8
-                    ">
-                    <Reviews/>
+                    "
+                >
+                    <Reviews />
                 </section>
+
+                {/* CONTACT */}
+                <section
+                    id="contact"
+                    className="
+                        relative
+                        z-40
+                        min-h-screen
+                        rounded-t-3xl
+                        bg-brand
+                        p-8
+                    "
+                >
+                    <Contact />
+                </section>
+
             </main>
+                {/* FOOTER */}
+                <Footer />
         </>
     );
 };

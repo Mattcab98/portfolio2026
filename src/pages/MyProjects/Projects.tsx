@@ -35,7 +35,7 @@ const Projects = () => {
 
                 <p className="text-gray-300">A collection of projects where ideas take shape through design, development, and thoughtful digital experiences.</p>
 
-                <div>
+                <div className="flex flex-col gap-8">
                     <ProjectCard/>
                 </div>
 
