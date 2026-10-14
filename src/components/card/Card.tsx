@@ -55,14 +55,6 @@ const Card = (props: CardProps) => {
         badgeClassName,
         badgeIconClassName,
         badgeLabelClassName,
-        badgeBackgroundColor,
-        badgeTextColor,
-        badgeBorderColor,
-        badgeBorderRadius,
-        badgePadding,
-        badgeGap,
-        badgeVariant,
-        badgeSize,
     } = props;
 
     const Icon = "icon" in props ? props.icon : null;
@@ -153,17 +145,9 @@ const Card = (props: CardProps) => {
                             <Badge
                                 label={badgeLabel}
                                 icon={badgeIcon}
-                                variant={badgeVariant}
-                                size={badgeSize}
                                 className={badgeClassName}
                                 iconClassName={badgeIconClassName}
                                 labelClassName={badgeLabelClassName}
-                                backgroundColor={badgeBackgroundColor}
-                                textColor={badgeTextColor}
-                                borderColor={badgeBorderColor}
-                                borderRadius={badgeBorderRadius}
-                                padding={badgePadding}
-                                gap={badgeGap}
                             />
                         </div>
                     )}

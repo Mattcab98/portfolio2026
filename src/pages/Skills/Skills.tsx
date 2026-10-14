@@ -54,11 +54,11 @@ const Skills = () => {
             >
 
 
-                <div className="skills-item bg-brand/20 gap-4 p-3 rounded-3xl flex justify-center items-center w-70 border-2">
+                <div className="skills-item bg-brand/20 gap-2 p-1 rounded-3xl flex justify-center items-center w-60 border">
                     <FaLayerGroup className="w-5 h-5" />
 
-                    <span className="text-2xl">
-                        Technology Stack
+                    <span className="text-xl">
+                        Technical Expertise
                     </span>
                 </div>
 
