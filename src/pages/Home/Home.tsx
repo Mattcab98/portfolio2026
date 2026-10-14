@@ -7,6 +7,7 @@ import { Hero } from "../Hero/Hero";
 import { Skills } from "../Skills/Skills";
 import { Method } from "../MethodWork/MethodWork";
 import { Projects } from "../MyProjects/Projects";
+import { Reviews } from "../reviews/Review";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,6 +52,7 @@ const Home = () => {
             <Header />
 
             <main className="relative">
+                
                 {/* HERO */}
                 <section className="sticky top-0 z-10 w-85 mx-auto">
                     <Hero />
@@ -105,6 +107,18 @@ const Home = () => {
                     "
                 >
                     <Projects />
+                </section>
+
+                {/* CLIENTS REVIEWS */}
+                <section className="
+                        relative
+                        z-40
+                        min-h-screen
+                        rounded-t-3xl
+                        bg-brand
+                        p-8
+                    ">
+                    <Reviews/>
                 </section>
             </main>
         </>

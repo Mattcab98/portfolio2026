@@ -51,7 +51,7 @@ const SkillCard = () => {
                     icon={icon}
                     title={title}
                     description={description}
-                    hoverMove="hover:-translate-y-2"
+                    hoverMove="hover:-translate-y-2 active:-translate-y-2"
 
                 >
                     <ul className="space-y-2 text-sm">
