@@ -34,16 +34,25 @@ const Reviews = () => {
             <div className="mx-auto flex max-w-6xl flex-col gap-5">
                 {/* Encabezado */}
                 <div className="flex flex-col gap-3">
+
                     <div className="inline-flex w-45 items-center justify-center gap-2 rounded-2xl border border-brand-hover bg-background/60 py-1 font-mono text-sm uppercase tracking-widest text-white">
                         <MessageSquareQuote size={18} />
                         Client Reviews
                     </div>
 
-                    <h2 className="font-display text-3xl font-bold text-background md:text-5xl">
-                        Experiences that speak for themselves.
-                    </h2>
+                    <h3
+                        className="flex flex-col items-start text-start text-5xl font-bold text-background justify-center pr-3 gap-2"
+                    >
 
-                    <p className="text-sm text-background">
+                        <span className="rounded-xl bg-background p-1 text-brand">
+                            Experiences
+                        </span>
+
+                        that speak for themselves.
+
+                    </h3>
+
+                    <p className="text-xl text-background">
                         Every project starts with an idea and a collaboration.
                         Here, clients can share their experience working with me.
                     </p>
@@ -89,8 +98,9 @@ const Reviews = () => {
 
                 {/* Formulario de reseñas */}
                 <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+                    
                     <div>
-                        <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand">
+                        <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-background">
                             Worked with me?
                         </p>
 
@@ -98,15 +108,18 @@ const Reviews = () => {
                             Share your experience.
                         </h3>
 
-                        <p className="mt-4 text-sm leading-relaxed text-gray-800">
+                        <p className="skills-item text-background text-md w-[90%] text-start">
                             Your feedback can help future clients understand
                             what it is like to work together.
                         </p>
+
                     </div>
 
                     <ReviewForm />
                 </div>
+
             </div>
+            
         </section>
     );
 };

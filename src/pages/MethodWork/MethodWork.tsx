@@ -5,7 +5,7 @@ import { BiSitemap } from "react-icons/bi";
 const Method = () => {
     return (
         <>
-            <section className="rounded-t-4xl flex flex-col gap-5 items-start text-start py-15">
+            <section className="rounded-t-4xl flex flex-col gap-5 items-start text-start pt-15 pb-25">
 
                 <div className="bg-background text-brand gap-2 px-5 py-1 rounded-3xl flex justify-center items-center border-2">
 

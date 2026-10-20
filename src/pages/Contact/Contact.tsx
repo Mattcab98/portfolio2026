@@ -48,32 +48,27 @@ const Contact = () => {
                         linear-gradient(90deg, rgba(0,0,0,0.12) 1px, transparent 1px)
                     `,
                     backgroundSize: "44px 44px",
-                }}
-            />
+                }} />
 
             <div className="relative grid max-w-7xl grid-cols-1 gap-8">
+
                 {/* Información de contacto */}
                 <div className="flex flex-col items-start gap-3">
 
-                    <div className="bg-background/90 text-brand gap-2 py-1 px-2 rounded-3xl flex justify-center items-center">
-
-                        <Send className=""/>
-                        <span className="text-[10px]">
-                            DIRECT CONTACT
-                        </span>
+                    <div className="inline-flex w-45 items-center justify-center gap-2 rounded-2xl border border-brand-hover bg-background/60 py-1 font-mono text-sm uppercase tracking-widest text-white">
+                        <Send size={15} />
+                        DIRECT CONTACT
                     </div>
 
-                    <h2 className="max-w-2xl font-display text-5xl font-extrabold leading-[0.92] tracking-tight">
-                        Let's Build
-                        <br />
-                        Something
-                        <br />
+                    <h2 className="flex flex-col items-start text-start text-6xl font-bold text-background justify-center pr-3 gap-2">
+                        <span>Let's Build</span>
+                        <span>Something</span>
                         <span className="inline-block rounded-2xl bg-black px-3 py-1 text-brand">
                             Great
                         </span>
                     </h2>
 
-                    <p className="max-w-xl text-sm leading-relaxed text-black">
+                    <p className="text-xl text-black">
                         Have a project in mind or looking to take your web presence to the next level? Send me a message, and let's schedule a video call.
                     </p>
 
@@ -82,8 +77,8 @@ const Contact = () => {
 
                         <a
                             href="mailto:contact@matdev.vercel.app"
-                            className="group flex items-center gap-3 text-sm font-medium transition-opacity hover:opacity-70 sm:text-base"
-                        >
+                            className="group flex items-center gap-3 text-sm font-medium transition-opacity hover:opacity-70 sm:text-base">
+
                             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black text-brand">
                                 <Mail size={18} />
                             </span>
@@ -91,6 +86,7 @@ const Contact = () => {
                             <span className="break-all">
                                 matiasalvarezbustos@gmail.com
                             </span>
+
                         </a>
 
                         <div className="flex items-center gap-3 text-sm font-medium">
@@ -189,8 +185,10 @@ const Contact = () => {
                             Send Message
                             <Send size={15} />
                         </button>
+
                     </form>
                 </div>
+
             </div>
 
         </section>

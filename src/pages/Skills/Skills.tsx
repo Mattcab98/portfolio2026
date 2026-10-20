@@ -71,12 +71,12 @@ const Skills = () => {
                     </h3>
                 </div>
 
-                <h3 className="skills-item text-gray-300 text-xl w-[90%] text-start">
+                <p className="skills-item text-gray-300 text-lg w-[90%] text-start">
                     I leverage modern frameworks and advanced tools to build
                     high-performance applications, optimized for search engines
                     and built with a solid foundation designed to deliver fast,
                     seamless experiences that grow with each project.
-                </h3>
+                </p>
 
                 <div className="container__skills flex flex-col gap-10">
                     <SkillCard />

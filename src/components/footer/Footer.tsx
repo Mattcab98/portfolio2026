@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Home } from "lucide-react";
 
+import { HomeLink } from "../../components/homeLink/HomeLink";
+import { SectionLink } from "../../components/sectionLink/SectionLink";
+
 const Footer = () => {
     const { t } = useTranslation();
     const navigate = useNavigate();
@@ -37,67 +40,64 @@ const Footer = () => {
                 <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between items-center">
 
                     {/* BRAND */}
-                    <button
-                        type="button"
-                        onClick={handleBackToTop}
-                        aria-label="matdev. - Inicio"
+                    <HomeLink
                         className="w-fit font-display text-2xl font-extrabold tracking-tight text-white transition-colors duration-300 hover:text-brand"
                     >
                         mat<span className="text-brand">dev</span>
-                    </button>
+                    </HomeLink>
 
                     {/* NAVIGATION */}
                     <nav
                         aria-label={t("footer.navigation")}
                         className="flex flex-col items-center gap-y-3 text-sm text-zinc-400"
                     >
-                        <a
-                            href="/#skills"
+                        <SectionLink
+                            to="/#skills"
                             className="transition-colors duration-300 hover:text-brand"
                         >
                             {t("What I Do")}
-                        </a>
+                        </SectionLink>
 
-                        <a
-                            href="/#method"
+                        <SectionLink
+                            to="/#method"
                             className="transition-colors duration-300 hover:text-brand"
                         >
                             {t("Method")}
-                        </a>
+                        </SectionLink>
 
-                        <a
-                            href="/#projects"
+                        <SectionLink
+                            to="/#projects"
                             className="transition-colors duration-300 hover:text-brand"
                         >
                             {t("Projects")}
-                        </a>
+                        </SectionLink>
 
-                        <a
-                            href="/#reviews"
+                        <SectionLink
+                            to="/#reviews"
                             className="transition-colors duration-300 hover:text-brand"
                         >
                             {t("Reviews")}
-                        </a>
+                        </SectionLink>
 
-                        <a
-                            href="/#contact"
+                        <SectionLink
+                            to="/#contact"
                             className="transition-colors duration-300 hover:text-brand"
                         >
                             {t("Contact")}
-                        </a>
+                        </SectionLink>
                     </nav>
 
                     {/* BACK TO TOP */}
                     <button
                         type="button"
                         onClick={handleBackToTop}
+                        aria-label="Back to top"
                         className="group flex w-fit items-center gap-2 rounded-full border border-zinc-800 p-3 text-sm text-zinc-300 transition-all duration-300 hover:border-brand/50 hover:text-brand"
                     >
                         <Home
-                            className="transition-transform duration-300 group-hover:-translate-y-1
-                            group-active:-translate-y-1"
+                            className="transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1"
                             aria-hidden="true"
-                             />
+                        />
                     </button>
                 </div>
 
